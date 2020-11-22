@@ -1,5 +1,13 @@
 const audioContext = new AudioContext();
 
+// create an element to show the note being played
+// const notePlaying = document.createElement("div");
+// notePlaying.className = "note-playing";
+// document.body.appendChild(notePlaying);
+
+// display the selected note under the piano
+const notePlaying = document.querySelector(".note-playing");
+
 const NOTE_DETAILS = [
   { note: "C", key: "Z", frequency: 261.626, active: false },
   { note: "Db", key: "S", frequency: 277.183, active: false },
@@ -20,6 +28,10 @@ document.addEventListener("keydown", (e) => {
 
   const keyboardKey = e.code;
   const noteDetail = getNoteDetails(keyboardKey);
+
+  console.log(noteDetail);
+  notePlaying.innerHTML = `you pressed ${keyboardKey}, which plays the ${noteDetail.note} key`;
+  // notePlaying.innerHTML = keyboardKey;
 
   if (noteDetail == null) return;
 
@@ -52,6 +64,7 @@ function playNotes() {
   });
 
   const activeNotes = NOTE_DETAILS.filter((n) => n.active);
+
   const gain = 1 / activeNotes.length;
   activeNotes.forEach((n) => {
     startNote(n, gain);

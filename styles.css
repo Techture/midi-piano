@@ -11,6 +11,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .piano {
@@ -42,4 +43,14 @@ body {
 
 .black.active {
   background-color: #333;
+}
+
+.note-playing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  padding-top: 1%;
+  color: #ccc;
 }
