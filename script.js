@@ -30,7 +30,7 @@ document.addEventListener("keydown", (e) => {
   const noteDetail = getNoteDetails(keyboardKey);
 
   // display what key/note combo is playing
-  notePlaying.innerHTML = `you pressed ${keyboardKey}, which plays the ${noteDetail.note} key`;
+  notePlaying.innerHTML = `you pressed ${keyboardKey}, which plays the note of ${noteDetail.note}`;
 
   if (noteDetail == null) return;
 
