@@ -1,6 +1,6 @@
-# JS Midi Piano using uses the AudioContext API
+# JS Midi Piano using the AudioContext API
 
-# What I'm experimenting with
+What I'm experimenting with:
 
 • JS
 • DOM traversal
