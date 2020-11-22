@@ -5,7 +5,7 @@ const audioContext = new AudioContext();
 // notePlaying.className = "note-playing";
 // document.body.appendChild(notePlaying);
 
-// display the selected note under the piano
+// select where to place key/note output under the piano
 const notePlaying = document.querySelector(".note-playing");
 
 const NOTE_DETAILS = [
